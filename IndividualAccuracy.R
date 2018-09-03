@@ -1,10 +1,16 @@
+### THIS CODE RUNS THE MODEL DESCRIBED IN
+### Becker, J., Brackbill, D., & Centola, D. (2017). Network dynamics of social influence in the wisdom of crowds. 
+### Proceedings of the national academy of sciences, 114(26), E5070-E5076.
+
 rm(list=ls());gc()
 require(ggplot2)
 require(igraph)
 require(mvtnorm)
 require(dplyr)
 
-source('//asc.upenn.edu/studentshares/NetworkDynamics/CI/CI One/Simulation/BasicModel.R', echo=TRUE)
+### SET YOUR WORKING DIRECTORY
+### THEN LOAD THE CORE OF THE MODEL
+source('BasicModel.R', echo=F)
 
 generatePopulation = function(g, corr, truth=0){
   sigma <- matrix(c(1, abs(corr), abs(corr), 1), nrow = 2)
