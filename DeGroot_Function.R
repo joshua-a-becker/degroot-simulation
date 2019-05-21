@@ -5,7 +5,7 @@ simDegroot = function(g, rounds, TRUTH=0, return.distribution=F) {
   V(g)$new_guess=NA
   for(i in 0:GAME_LENGTH) {
     output_row = data.frame(
-      N=N,
+      N=vcount(g),
       deg.cent=g$deg.cent,
       truth=TRUTH,
       mean = mean(V(g)$guess),
