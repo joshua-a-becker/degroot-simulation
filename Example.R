@@ -10,7 +10,7 @@ require(dplyr)
 
 ### SET YOUR WORKING DIRECTORY
 ### THEN LOAD THE CORE OF THE MODEL
-source('BasicModel.R', echo=F)
+source('DeGroot_Function.R', echo=F)
 
 generatePopulation = function(g, corr, truth=0){
   sigma <- matrix(c(1, abs(corr), abs(corr), 1), nrow = 2)
